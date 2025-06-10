@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "educations",
+  "info": {
+    "singularName": "education",
+    "pluralName": "educations",
+    "displayName": "Education "
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Degree": {
+      "type": "string"
+    },
+    "University": {
+      "type": "string"
+    },
+    "CGPA": {
+      "type": "decimal"
+    },
+    "YearOfPassing": {
+      "type": "string"
+    },
+    "profiles": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::profile.profile",
+      "mappedBy": "education"
+    }
+  }
+}

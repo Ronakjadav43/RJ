@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "workings",
+  "info": {
+    "singularName": "working",
+    "pluralName": "workings",
+    "displayName": "Working"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Organization": {
+      "type": "string"
+    },
+    "Designation": {
+      "type": "string"
+    },
+    "From": {
+      "type": "date"
+    },
+    "To": {
+      "type": "date"
+    },
+    "Role": {
+      "type": "text"
+    },
+    "profiles": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::profile.profile",
+      "mappedBy": "working"
+    }
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "kind": "collectionType",
+  "collectionName": "profiles",
+  "info": {
+    "singularName": "profile",
+    "pluralName": "profiles",
+    "displayName": "Profile"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "Email": {
+      "type": "email"
+    },
+    "Phone": {
+      "type": "biginteger"
+    },
+    "BirthdayDate": {
+      "type": "date"
+    },
+    "Job": {
+      "type": "string"
+    },
+    "AboutMe": {
+      "type": "richtext"
+    },
+    "education": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::education.education",
+      "inversedBy": "profiles"
+    },
+    "portfolio": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::portfolio.portfolio",
+      "inversedBy": "profiles"
+    },
+    "service": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::service.service",
+      "inversedBy": "profiles"
+    },
+    "skill": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::skill.skill",
+      "inversedBy": "profiles"
+    },
+    "working": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::working.working",
+      "inversedBy": "profiles"
+    }
+  }
+}
